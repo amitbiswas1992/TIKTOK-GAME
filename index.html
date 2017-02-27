@@ -28,10 +28,12 @@
             width: 200px;
             box-sizing: border-box;
             border: 5px solid gray;
+            font-size: 5em;
+            justify-content: center;
         }
         
         .square:hover {
-            background-color: yellow;
+            background-color: navajowhite;
             cursor: pointer;
         }
         
@@ -45,7 +47,17 @@
 </head>
 
 <body>
-    <script></script>
+    <script>
+        var PLAYER_ONE_SYMBOL = 'X';
+        var PLAYER_TWO_SYMBOL = 'O';
+
+        var board = document.querySelector('.board')
+        board.addEventListener('click', function(e) {
+            e.target.innerHTML = currentTurn
+            currentTurn = currentTurn === PLAYER_ONE_SYMBOL ? PLAYER_TWO_SYMBOL : PLAYER_ONE_SYMBOL
+
+        });
+    </script>
     <h1>TIKTOK</h1>
     <div class="box">
         <div class="board">
