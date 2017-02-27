@@ -8,8 +8,8 @@
         h1 {
             text-align: center;
             color: white;
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            font-size: 70px;
+            font-family: 'Arial';
+            font-size: 50px;
             font-weight: bold;
         }
         
@@ -30,10 +30,11 @@
             border: 5px solid gray;
             font-size: 5em;
             justify-content: center;
+            align-items: center;
         }
         
         .square:hover {
-            background-color: navajowhite;
+            background-color: white;
             cursor: pointer;
         }
         
@@ -48,8 +49,9 @@
 
 <body>
     <script>
-        var PLAYER_ONE_SYMBOL = 'X';
-        var PLAYER_TWO_SYMBOL = 'O';
+        var PLAYER_ONE_SYMBOL = 'X'
+        var PLAYER_TWO_SYMBOL = 'O'
+        var currentTurn = PLAYER_ONE_SYMBOL
 
         var board = document.querySelector('.board')
         board.addEventListener('click', function(e) {
